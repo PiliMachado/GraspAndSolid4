@@ -15,8 +15,10 @@ namespace Full_GRASP_And_SOLID
 
         public Product FinalProduct { get; set; }
 
-        public void AddStep(Step step)
+        //Aplico patrón Creator 
+        public void AddStep(Product input, double quiantity, Equipment equipment, int time)
         {
+            Step step = new Step(input, quiantity, equipment,time);
             this.steps.Add(step);
         }
 
